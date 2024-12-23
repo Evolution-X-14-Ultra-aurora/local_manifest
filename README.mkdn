@@ -1,0 +1,11 @@
+![Evolution X Dago](https://github.com/Evolution-X-14-Ultra-aurora/local_manifest/raw/evo/Banner.png)
+
+# Initialize local repository
+```
+repo init -u https://github.com/Evolution-X-14-Ultra-aurora/local_manifest -b evo --git-lfs
+```
+
+# Sync up to track all local repos
+```
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```

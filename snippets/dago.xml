@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Dago -->
+  <remote  name="evo_dago"
+           fetch="https://github.com/Evolution-X-14-Ultra-aurora" />
+           
+  <!-- Lolipuru -->
+  <remote  name="lolipuru"
+           fetch="https://github.com/lolipuru" />
+           
+  <!-- Xiaomi-8560 -->
+  <remote  name="markakash"
+           fetch="https://gitlab.com/xiaomi-8560" />
+           
+  <!-- Xiaomi-SM8650 -->
+  <remote  name="xiaomi-SM8650"
+           fetch="https://github.com/Xiaomi-SM8650" />
+           
+  <!-- Yaap -->        
+  <remote  name="yaap"
+           fetch="https://github.com/yaap"
+           revision="refs/heads/fifteen" />
+           
+  <!-- Device Qcom -->
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr_sm8650" remote="yaap" revision="refs/heads/fifteen" />
+
+  <!-- Hardware Qcom -->
+  <project path="hardware/qcom-caf/sm8650/audio/agm" name="vendor_qcom_opensource_agm-sm8650" remote="yaap" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/sm8650/audio/pal" name="vendor_qcom_opensource_arpal-lx-sm8650" remote="yaap" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/sm8650/audio/primary-hal" name="hardware_qcom_audio-ar-sm8650" remote="yaap" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/sm8650/dataipa" name="vendor_qcom_opensource_dataipa-sm8650" remote="yaap" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/sm8650/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr-sm8650" remote="yaap" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/sm8650/display" name="hardware_qcom-caf_sm8650_display" remote="yaap" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/sm8650/media" name="hardware_qcom-caf_sm8650_media" remote="yaap" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/thermal" name="hardware_qcom-caf_thermal" remote="yaap" groups="qcom,lanai-vendor" revision="refs/heads/fifteen" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="yaap" groups="qcom" revision="refs/heads/fifteen"  >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8650/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8650/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8650/Android.mk" />
+  </project>
+  
+  <!--Xiaomi14Serie -->
+  <project path="device/xiaomi/aurora" name="android_device_xiaomi_aurora" remote="evo_dago" revision="refs/heads/evo" />
+  <project path="device/xiaomi/sm8650-common" name="android_device_xiaomi_sm8650-common" remote="evo_dago" revision="refs/heads/evo" />
+  <project path="kernel/xiaomi/sm8650" name="android_kernel_xiaomi_sm8650" remote="evo_dago" revision="refs/heads/evo" />
+  <project path="kernel/xiaomi/sm8650-modules" name="android_kernel_xiaomi_sm8650-modules" remote="evo_dago" revision="refs/heads/evo" />
+  <project path="device/xiaomi/aurora-kernel" name="android_device_xiaomi_aurora-kernel" remote="evo_dago" revision="refs/heads/evo" />
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="evo_dago" revision="refs/heads/evo" />
+
+</manifest> 
