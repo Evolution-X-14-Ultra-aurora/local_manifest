@@ -5,13 +5,16 @@
   <remote  name="evo_dago"
            fetch="https://github.com/Evolution-X-14-Ultra-aurora" />
            
+  <remote  name="dago_gitlab"
+           fetch="https://gitlab.com/fuckdedeurkruk" />
+           
   <!-- Lolipuru -->
   <remote  name="lolipuru"
            fetch="https://github.com/lolipuru" />
            
   <!-- Xiaomi-8560 -->
   <remote  name="markakash"
-           fetch="https://gitlab.com/xiaomi-8560" />
+           fetch="https://github.com/xiaomi-8560" />
            
   <!-- Xiaomi-SM8650 -->
   <remote  name="xiaomi-SM8650"
@@ -66,12 +69,18 @@
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8650/Android.mk" />
   </project>
   
-  <!--Xiaomi14Serie -->
+  <!-- Xiaomi14Serie -->
   <project path="device/xiaomi/aurora" name="android_device_xiaomi_aurora" remote="evo_dago" revision="refs/heads/evo" />
   <project path="device/xiaomi/sm8650-common" name="android_device_xiaomi_sm8650-common" remote="evo_dago" revision="refs/heads/evo" />
   <project path="kernel/xiaomi/sm8650" name="android_kernel_xiaomi_sm8650" remote="evo_dago" revision="refs/heads/evo" />
   <project path="kernel/xiaomi/sm8650-modules" name="android_kernel_xiaomi_sm8650-modules" remote="evo_dago" revision="refs/heads/evo" />
   <project path="device/xiaomi/aurora-kernel" name="android_device_xiaomi_aurora-kernel" remote="evo_dago" revision="refs/heads/evo" />
   <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="evo_dago" revision="refs/heads/evo" />
+  <project path="vendor/xiaomi/sm8650-common" name="android_vendor_xiaomi_sm8650-common" remote="dago_gitlab" revision="refs/heads/evo" />
+  <project path="vendor/xiaomi/aurora" name="android_vendor_xiaomi_aurora" remote="dago_gitlab" revision="refs/heads/evo" />
+  
+  <!-- manifest -->
+  <project path="local/manifest" name="local_manifest" remote="evo_dago" revision="refs/heads/evo" />
+  <project path="manifest" name="manifest" remote="evo_dago" revision="refs/heads/vic" />
 
 </manifest> 
